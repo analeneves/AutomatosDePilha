@@ -2,7 +2,7 @@
  #include <stdlib.h>
  #include "aut_pilha.h"
   //Este autômato de pilha reconhece linguagens do tipo {0^n1^n/n>0}
-   Pilha *pil;
+   
    //Função para criar a pilha
    Pilha* cria (void) {
      Pilha* p = (Pilha*) malloc(sizeof(Pilha));
@@ -31,7 +31,7 @@
    }
 
    //Função de remoção da pilha
-   void pop(Pilha* p){
+   int pop(Pilha* p){
      int v;
      if(vazia(p)){
        printf("Pilha vazia!\n");
@@ -69,12 +69,12 @@
        }
    }
 
-   int RECONHECE_PAR(void){
+   int RECONHECE_PAR(Pilha *pil){
      int q=0, teste=0;
      printf("Cadeia a ser processada:\n");
      for (i = 0; i < n; i++)
      printf("%d", cadeia[i]);
-     printf("\nElemento do topo da pilha:\n%d\nEstado do autômato: %d\n\n", dado);
+     printf("\nElemento do topo da pilha:\n%d\nEstado do autômato: %d\n\n", dado, q);
         for(i=0; i<n; i++){
           if (q == -1)
           break;

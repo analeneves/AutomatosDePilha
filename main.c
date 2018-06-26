@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "aut_pilha.h"
-
+    Pilha *pil;
    int main() {
      int valor;
      inicio();
-     pil = cria;
+     pil = cria();
      push(pil,dado);
-     valor = RECONHECE_PAR();
+     valor = RECONHECE_PAR(pil);
 
      if (valor = 1)
      printf("Cadeia reconhecida!\n\n");

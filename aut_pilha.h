@@ -18,4 +18,14 @@ struct pilha {
  };
  typedef struct pilha Pilha;
 
+Pilha* cria (void);
+No* ins_ini (No* l, int v);
+No* ret_ini (No* l);
+void push (Pilha* p, int v);
+int pop(Pilha* p);
+int vazia (Pilha* p);
+void libera (Pilha* p);
+void imprimePilha(Pilha* p);
+int RECONHECE_PAR(Pilha* p);
+void inicio ();
  #endif
